@@ -1,16 +1,14 @@
-from oop1 import Vehicle
-
 # To the GroundVehicle class, add method drive() that returns "vroooom".
 #
 # Also change it so the num_wheels defaults to 4 if not specified when the
 # object is constructed.
 
-class GroundVehicle(Vehicle):
-    def __init__(self, num_wheels=4):
+class GroundVehicle():
+    def __init__(self, num_wheels = 4):
         self.num_wheels = num_wheels
 
     def drive(self):
-        print("vroooom")
+        return "vroooom"
 
 
 # Subclass Motorcycle from GroundVehicle.
@@ -24,8 +22,8 @@ class Motorcycle(GroundVehicle):
     def __init__(self):
         super().__init__(2)
 
-    super().drive()
-    print("BRAAAP!")
+    def drive(self):
+        return "BRAAAP!!"
 
 vehicles = [
     GroundVehicle(),
